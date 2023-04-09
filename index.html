@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to volkswagen</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <marquee class="blink"
+    direction="right" 
+        behavior="alternate" 
+        style="border:salmon 3px SOLID">
+        Welcome to Volkswagen rentle
+        <img src="volk.png" height="50" width="80">
+    </marquee>
+    <hr>
+    <br>
+    <div class="popup" onclick="myFunction()">Click here to know more about Volkwagen!
+        <span class="popuptext" id="popUpElement">Volkswagen Group, also called Volkswagen AG, major
+            German automobile manufacturer, founded by the German
+            government in 1937 to mass-produce a low-priced “people's car.”
+            Headquarters are in Wolfsburg, Germany. The company was originally
+            operated by the German Labour Front (Deutsche Arbeitsfront), a Nazi organization.
+        </span>
+    </div>
+    <div id="from-details">
+    <form>
+        <fieldset>
+            <p>
+                <h3 style="color:brown;">Fill the details</h3>
+            </p>
+
+            <p>
+                <label>
+                        First name:<input type="text" required/>
+                    </label>
+            </p>
+            <p>
+                <label>
+                        Last name:<input name="lastname" type="text" required/>
+                    </label>
+            </p>
+            <p>
+                <label>
+                        Email:<input name="lastname" type="text" required/>
+                </label>
+            </p>
+            <p>
+                Gender
+                <label>
+                        <input type="radio" name="gender" value="male"/> Male
+                        <input type="radio" name="gender" value="female"/> Female
+                    </label>
+            </p>
+            <p>
+                Age.
+                <input type="Number" required>
+            </p>
+            <p>
+            <label> Date of birth:<input type="date" name="birthDate"></label>
+            </p>
+            <p>
+                MobileNo.
+                <input type="Number">
+                <button>Verify</button>
+            </p>
+            <p>
+                <label>
+                    Address: <br/>
+                    <textarea name="address" cols="30" rows="3"></textarea></label>
+            </p>
+            <p>
+                <label for="bookingtime">Booking (date and time):</label>
+                <input type="datetime-local" id="bookingtime" name="bookingtime">
+            </p>
+            <p>
+                <label for="returningtime">Returning (date and time):</label>
+                <input type="datetime-local" id="returningtime" name="returningtime">
+            </p>
+            <p>
+                <label for="cars">Choose a car:</label>
+                <select id="cars" name="cars">
+                    <option value="volvo">Select</option>
+                    <option value="volvo">Volkswagen XC90</option>
+                    <option value="saab">Bugati 95</option>
+                    <option value="mercedes">Mercedes SLK</option>
+                    <option value="audi">Audi TT</option>
+                </select>
+            </p>
+        </fieldset>
+    </form>
+</div>
+<button onclick="submit()">Submit</button>
+<p id="submit"></p>
+
+<script>
+function submit() {
+  document.getElementById("submit").innerHTML = alert('You have succesfully booked your car!');
+}
+// fucnction for popup show
+function myFunction() {
+var popup = document.getElementById("popUpElement");
+popup.classList.toggle("show");
+}
+</script>
+
+</body>
+
+</html>
